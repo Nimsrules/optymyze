@@ -72,35 +72,39 @@ document.addEventListener('DOMContentLoaded', function(){
 	addNewEventButton.addEventListener('click', function(e){
 		createEvent();
 		populateEvents();
+		toggles();
 
 		events.style.display = 'block';
 		eventsForm.style.display = 'none';
 		e.preventDefault();
 	});
 
-	//Toggling the events list and form sections
-	const addEventButton = document.querySelector('.add-event');
-	const addEventCancelButton = document.querySelector('.add-event-cancel');
-	addEventButton.addEventListener('click', function(){
-		events.style.display = 'none';
-		eventsForm.style.display = 'block';
-	});
-	addEventCancelButton.addEventListener('click', function(){
-		events.style.display = 'block';
-		eventsForm.style.display = 'none';
-	});
-
-	//Toggling the description of single event
-	let singleEvent = document.querySelectorAll('.events>ul>li>a');
-	singleEvent.forEach((s) => {
-		s.addEventListener('click', function(e){
-			var thisDescription = this.querySelector('small');
-			if(window.getComputedStyle(thisDescription).display === 'block'){
-				thisDescription.style.display = 'none';
-			}else{
-				thisDescription.style.display = 'block';
-			}
-			e.preventDefault();
+	function toggles(){
+		//Toggling the events list and form sections
+		const addEventButton = document.querySelector('.add-event');
+		const addEventCancelButton = document.querySelector('.add-event-cancel');
+		addEventButton.addEventListener('click', function(){
+			events.style.display = 'none';
+			eventsForm.style.display = 'block';
 		});
-	});
+		addEventCancelButton.addEventListener('click', function(){
+			events.style.display = 'block';
+			eventsForm.style.display = 'none';
+		});
+
+		//Toggling the description of single event
+		let singleEvent = document.querySelectorAll('.events>ul>li>a');
+		singleEvent.forEach((s) => {
+			s.addEventListener('click', function(e){
+				var thisDescription = this.querySelector('small');
+				if(window.getComputedStyle(thisDescription).display === 'block'){
+					thisDescription.style.display = 'none';
+				}else{
+					thisDescription.style.display = 'block';
+				}
+				e.preventDefault();
+			});
+		});
+	}
+	toggles();
 });
