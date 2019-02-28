@@ -1,6 +1,6 @@
 var data = [
 	{
-		"eventName": "Maulik's birthday party",
+		"eventName": "Friend's birthday party",
 		"eventType": "social",
 		"eventLocation": "Bharuch",
 		"eventDate": "1st Jan 2019",
