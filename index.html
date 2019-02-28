@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Events App | Optymyze</title>
+	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,600" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main>
+		<section class="events"></section>
+
+		<section class="events-form">
+			<form>
+				<label>
+					Event Name
+					<input type="text" name="eventName" class="required">
+				</label>
+				<label>
+					Event Type
+					<input type="text" name="eventType" class="required">
+				</label>
+				<label>
+					Event Location
+					<input type="text" name="eventLocation" class="required">
+				</label>
+				<label>
+					Event Description
+					<textarea cols="30" rows="10" name="eventDescription" class="required"></textarea>
+				</label>
+				<div class="button-group">
+					<input type="submit" id="add-event" class="button button--filled" value="Add Event">
+					<a href="#" class="add-event-cancel">Cancel</a>
+				</div>
+			</form>
+		</section>
+	</main>
+
+	<script src="js/data.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

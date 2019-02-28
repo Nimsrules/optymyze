@@ -1,0 +1,184 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+html, body{
+  font-size: 100%;
+  height: 100%;
+}
+
+body{
+  background: #f5f7f9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.button {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  padding: 6px 15px;
+  box-shadow: none;
+  background: none;
+  border: 1px solid #434d54;
+  color: #434d54;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.2s ease-in-out;
+}
+
+.button--filled{
+  background: #434d54;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.button--filled:hover{
+  transform: translateY(-5px);
+}
+
+main{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+main h2{
+  font: 300 16px/1.4 'IBM Plex Sans';
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.events {
+  width: 700px;
+}
+
+.events ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.events>ul>li {
+  list-style: none;
+  border: 1px solid #eaecee;
+  margin: 0 0 15px 0;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.events>ul>li:hover {
+  border-color: #434d54;
+}
+
+.events ul li a {
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: #fff;
+}
+
+.events ul.meta {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0;
+}
+
+.events ul.meta li {
+  margin: 0 10px 0 0;
+  padding: 0 0 0 15px;
+  list-style: none;
+  position: relative;
+  font: 400 13px/1.5 'IBM Plex Sans';
+  color: #767676;
+  text-transform: capitalize;
+}
+
+.events ul.meta li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background: #666;
+  border-radius: 50%;
+}
+
+.events ul.meta li:first-child {
+  padding-left: 0;
+}
+
+.events ul.meta li:first-child::before {
+  display: none;
+}
+
+.events .content small{
+  display: none;
+}
+
+.events>ul>li>a:hover .button {
+  background: #434d54;
+  color: #fff !important;
+}
+
+.events h6 {
+  margin-bottom: 0;
+  font: 600 17px/1.4 'IBM Plex Sans';
+  color: #434d54;
+}
+
+.events-form{
+  display: none;
+}
+
+.events-form form{
+  display: flex;
+  flex-direction: column;
+  width: 500px
+}
+
+.events-form form label{
+  font: 400 13px/1.4 'IBM Plex Sans';
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.events-form form input:not(#add-event),
+.events-form form textarea{
+  display: block;
+  width: 100%;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  padding: 7px;
+  outline: none;
+  background: #fff;
+  color: #767676;
+  margin-bottom: 10px;
+  font-size: 14px;
+  max-width: 100%;
+  line-height: 1;
+}
+
+.events-form .button-group{
+  align-self: center;
+}
+
+#add-event{
+  cursor: pointer;
+  margin-right: 15px;
+}
