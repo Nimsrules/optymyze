@@ -78,6 +78,10 @@ main h2{
   transition: all 0.2s ease-in-out;
 }
 
+.events>ul>li.new{
+  border-color: #e9b413;
+}
+
 .events>ul>li:hover {
   border-color: #434d54;
 }
@@ -89,6 +93,25 @@ main h2{
   justify-content: space-between;
   padding: 15px 20px;
   background: #fff;
+}
+
+.events ul li a small{
+  font: 400 13px/1.4 'IBM Plex Sans';
+  color: #767676;
+  margin-right: 30px;
+  padding-top: 10px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.events ul li a small::before{
+  content: '';
+  width: 100px;
+  height: 1px;
+  background: #767676;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .events ul.meta {

@@ -15,19 +15,23 @@
 			<form>
 				<label>
 					Event Name
-					<input type="text" name="eventName" class="required">
+					<input type="text" name="eventName" class="required" maxlength="45">
 				</label>
 				<label>
 					Event Type
-					<input type="text" name="eventType" class="required">
+					<input type="text" name="eventType" class="required" maxlength="15">
 				</label>
 				<label>
 					Event Location
-					<input type="text" name="eventLocation" class="required">
+					<input type="text" name="eventLocation" class="required" maxlength="25">
+				</label>
+				<label>
+					Event Date
+					<input type="text" name="eventDate" class="required" maxlength="25">
 				</label>
 				<label>
 					Event Description
-					<textarea cols="30" rows="10" name="eventDescription" class="required"></textarea>
+					<textarea cols="30" rows="10" name="eventDescription" class="required" maxlength="100"></textarea>
 				</label>
 				<div class="button-group">
 					<input type="submit" id="add-event" class="button button--filled" value="Add Event">
